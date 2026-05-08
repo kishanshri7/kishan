@@ -11,29 +11,18 @@
     .page{width:760px;margin:0 auto;background:#fff;min-height:100vh;box-shadow:0 0 0 1px #ddd}.hero{height:118px;position:relative;overflow:hidden;background:url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1600&q=80') center 40%/cover no-repeat;border-bottom:1px solid #cfcfcf}.hero::after{content:"";position:absolute;left:-6%;right:-6%;bottom:-60px;height:108px;background:#fff;border-top:8px solid #284d78;border-radius:0 0 50% 50% / 0 0 100% 100%;transform:rotate(-1.3deg)}
     .nav{display:grid;grid-template-columns:repeat(5,1fr);border-top:1px solid #d3d3d3;border-bottom:1px solid #cfcfcf;background:linear-gradient(#f5f5f5,#ededed)}.nav a{text-decoration:none;color:#2c3f58;font-weight:bold;font-size:12px;text-align:center;padding:11px 6px 10px;border-right:1px solid #d2d2d2}.nav a:last-child{border-right:none}.wrap{padding:8px 12px 18px}h1{margin:0 0 14px;font-size:16px;color:#233b56;font-weight:bold}.toolbar,.actions{display:flex;gap:6px;flex-wrap:wrap}
     .mini-btn,.action-btn,.small-btn{background:linear-gradient(#f6f2ec,#e5e1db);border:1px solid var(--btn-border);border-radius:2px;padding:2px 7px;font-size:12px;color:#5b5b5b;box-shadow:inset 0 1px 0 #fff;cursor:pointer}
-
-    /* Disabled state — grey, no interaction */
     .action-btn[disabled]:not(.warn),.action-btn[data-disabled="true"]:not(.warn){background:linear-gradient(#efefef,#dddddd);border-color:#c7c7c7;color:#888;cursor:not-allowed;box-shadow:none}
-
-    /* Book Pickup disabled state — kept red/warn to match existing convention */
     .action-btn.warn{background:linear-gradient(#f9d6d7,#f1a9ab);border-color:#c57f86;color:var(--warn)}
     .action-btn.warn.ready{background:linear-gradient(#f6f2ec,#e5e1db);border-color:#b8b8b8;color:#5b5b5b;font-weight:normal}
     .action-btn.warn[disabled],.action-btn.warn[data-disabled="true"]{background:linear-gradient(#f9d6d7,#f1a9ab);border-color:#c57f86;color:var(--warn);cursor:not-allowed;box-shadow:inset 0 1px 0 #fff;opacity:1}
-
-    /* FIX 3: Edit Shipment — uses a distinct teal/blue style so it doesn't look disabled */
     .action-btn.edit-btn{background:linear-gradient(#ddeaf7,#b8d2ed);border-color:#7aaad0;color:#1a3f63;font-weight:bold}
     .action-btn.edit-btn:hover{background:linear-gradient(#cce0f5,#a4c6e8);border-color:#5a90c0}
-
-    /* FIX 2: Stale document button — amber/orange tint instead of red,
-       so it reads as "needs attention" not "disabled/blocked" */
     .action-btn.stale{background:linear-gradient(#fef3d7,#f5d98a);border-color:#c9a53a;color:#6b4a00;font-weight:bold}
     .action-btn.stale:hover{background:linear-gradient(#fdecc4,#f0cc72);border-color:#b08a20}
-
     .notes{font-size:11px;line-height:1.15;margin:4px 0 10px}.section-title{color:#223a57;font-size:14px;font-weight:bold;margin:8px 0 6px}.rule{height:3px;background:var(--line);margin:8px 0 16px}.contact-grid{display:grid;grid-template-columns:45px 180px 55px 130px 55px 170px;gap:8px;align-items:center;margin-bottom:8px}.lbl{color:var(--red);font-weight:bold;font-size:12px}.input,.select{height:18px;border:1px solid #b9b9b9;background:#fff;padding:0 4px;font-size:12px;width:100%}
     .triple{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin-bottom:16px}.box{border:1px solid #ebebeb;padding:6px 8px 10px;min-height:145px}.box-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:6px;color:#3a3a3a;gap:6px}.address-grid{display:grid;grid-template-columns:55px 1fr;gap:4px 6px;align-items:center}.address-grid .lbl{font-size:11px}.bol-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px 28px;align-items:start}.leftcols,.rightcols{display:grid;grid-template-columns:170px 128px;gap:4px 6px;align-items:center}.payment{grid-column:1/-1;display:flex;align-items:center;gap:10px;margin-bottom:2px}
     .goods{margin-top:6px;display:grid;grid-template-columns:40px 54px 85px 42px 118px 44px 48px 42px 42px 42px 64px 46px;gap:3px;align-items:center;font-size:11px}.goods .head{color:#444;font-size:10px;line-height:1.05}.goods input,.goods select{height:16px;border:1px solid #b9b9b9;width:100%;font-size:11px}.goods .check{width:11px;height:11px;margin:0 auto}.totals{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin-top:4px;align-items:end;font-size:11px}.pickup-grid{display:grid;grid-template-columns:90px 130px 70px 100px 70px 100px;gap:8px;align-items:center}
     .services{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px}.service-box{border:1px solid #ebebeb;padding:8px 10px;min-height:160px}.service-box h3{margin:0 0 8px;padding-bottom:4px;border-bottom:3px solid #233a57;color:#494949;font-size:12px;font-weight:normal}.checkline{display:flex;align-items:center;gap:4px;margin:3px 0;font-size:12px}.checkline input{width:12px;height:12px}.note{font-size:11px;margin:8px 0 6px;line-height:1.15}.footer-link{margin-top:16px;font-size:11px;color:#163a63}.muted{color:#555}
-
     .modal-backdrop{position:fixed;inset:0;background:rgba(0,0,0,.28);display:none;align-items:flex-start;justify-content:center;padding-top:130px;z-index:20}
     .modal-backdrop.show{display:flex}.modal{width:680px;background:#fff;border:1px solid #7e8da1;box-shadow:0 8px 30px rgba(0,0,0,.25)}
     .modal-header{height:24px;background:linear-gradient(#1f5d98,#0f4070);color:#fff;font-weight:bold;display:flex;align-items:center;justify-content:space-between;padding:0 8px}
@@ -42,9 +31,7 @@
     table.data-list{width:100%;border-collapse:collapse;font-size:12px} table.data-list th{background:#144a7c;color:#fff;text-align:left;padding:2px 6px;position:sticky;top:0}
     table.data-list td{padding:4px 6px;border-bottom:1px solid #e2e2e2} table.data-list tbody tr:nth-child(odd){background:#efefef} table.data-list tbody tr:hover{background:#dce7f2;cursor:pointer}
     .small-delete{padding:1px 6px;border:1px solid #bbb;background:#f0f0f0}
-
     .locked-tooltip{position:fixed;background:#2b3f58;color:#fff;padding:8px 12px;border-radius:4px;font-size:12px;white-space:nowrap;z-index:100;box-shadow:0 2px 8px rgba(0,0,0,.3);pointer-events:none}
-
     @media (max-width:800px){.page{width:100%}.contact-grid,.pickup-grid,.triple,.services,.bol-grid{grid-template-columns:1fr}.goods{overflow:auto;display:block}.goods>*{margin-bottom:4px}.modal{width:95%}}
   </style>
 </head>
@@ -78,23 +65,26 @@
   <button type="button" class="action-btn" id="quoteBtn">Quote</button>
   <button type="button" class="action-btn" id="bolBtn">Generate BOL</button>
   <button type="button" class="action-btn" id="labelBtn">Generate Pallet Label</button>
-  <!-- FIX 3: Edit Shipment gets .edit-btn class — teal/blue, clearly active, not red -->
-  <button type="button" class="action-btn edit-btn" id="editShipmentBtn" style="display:none;">✎ Edit Shipment</button>
+  <button type="button" class="action-btn edit-btn" id="editShipmentBtn" style="display:none;">&#9998; Edit Shipment</button>
   <button type="button" class="action-btn warn" id="pickupBtn" data-disabled="true">Book Pickup</button>
   <button type="button" class="action-btn" id="saveTemplateBtn">Save Template</button>
 </div>
 </form></div>
 
 <!-- Record modal -->
-<div class="modal-backdrop" id="recordModal"><div class="modal"><div class="modal-header"><span id="modalHeaderText">Templates</span><button class="modal-close" type="button" id="modalCloseBtn">×</button></div><div class="modal-title2" id="modalTitleText">Templates</div><div class="modal-body"><div class="list-wrap"><table class="data-list"><thead id="modalHead"></thead><tbody id="modalBody"></tbody></table></div></div></div></div>
+<div class="modal-backdrop" id="recordModal"><div class="modal"><div class="modal-header"><span id="modalHeaderText">Templates</span><button class="modal-close" type="button" id="modalCloseBtn">&times;</button></div><div class="modal-title2" id="modalTitleText">Templates</div><div class="modal-body"><div class="list-wrap"><table class="data-list"><thead id="modalHead"></thead><tbody id="modalBody"></tbody></table></div></div></div></div>
 
-<!-- FIX 1: Confirm modal — updated wording to reflect that editing IS possible via Edit Shipment -->
-<div class="modal-backdrop" id="confirmModal"><div class="modal" style="width:420px;"><div class="modal-header"><span>Confirm Generation</span><button class="modal-close" type="button" id="confirmCloseBtn">×</button></div><div class="modal-body" style="padding:16px;"><p style="margin-top:0;">You are about to generate a <span id="confirmDocName" style="font-weight:bold;">document</span>.</p><p>The form will be locked for editing. If you need to make changes afterwards, use <strong>Edit Shipment</strong> to unlock the form — note that any previously generated documents will need to be regenerated.</p><p style="margin-bottom:0;">Do you want to continue?</p><div style="margin-top:20px;display:flex;justify-content:flex-end;gap:8px;"><button type="button" class="action-btn" id="confirmCancelBtn">Cancel</button><button type="button" class="action-btn" id="confirmProceedBtn" style="background:var(--line);color:#fff;">Generate</button></div></div></div></div>
+<!-- Generate BOL / Pallet Label confirm modal -->
+<div class="modal-backdrop" id="confirmModal"><div class="modal" style="width:420px;"><div class="modal-header"><span>Confirm Generation</span><button class="modal-close" type="button" id="confirmCloseBtn">&times;</button></div><div class="modal-body" style="padding:16px;"><p style="margin-top:0;">You are about to generate a <span id="confirmDocName" style="font-weight:bold;">document</span>.</p><p>The form will be locked for editing. If you need to make changes afterwards, use <strong>Edit Shipment</strong> to unlock the form &mdash; note that any previously generated documents will need to be regenerated.</p><p style="margin-bottom:0;">Do you want to continue?</p><div style="margin-top:20px;display:flex;justify-content:flex-end;gap:8px;"><button type="button" class="action-btn" id="confirmCancelBtn">Cancel</button><button type="button" class="action-btn" id="confirmProceedBtn" style="background:var(--line);color:#fff;">Generate</button></div></div></div></div>
+
+<!-- Edit Shipment confirm modal -->
+<div class="modal-backdrop" id="editConfirmModal"><div class="modal" style="width:420px;"><div class="modal-header"><span>Edit Shipment</span><button class="modal-close" type="button" id="editConfirmCloseBtn">&times;</button></div><div class="modal-body" style="padding:16px;"><p style="margin-top:0;">Unlocking the form will require you to <strong>regenerate the BOL and Pallet Label</strong> before booking a pickup.</p><p style="margin-bottom:0;">Any previously generated documents will be marked as out of date. Do you want to continue?</p><div style="margin-top:20px;display:flex;justify-content:flex-end;gap:8px;"><button type="button" class="action-btn" id="editConfirmCancelBtn">Cancel</button><button type="button" class="action-btn edit-btn" id="editConfirmProceedBtn">Unlock &amp; Edit</button></div></div></div></div>
 
 <script>
 const form=document.getElementById('quoteForm'),bolBtn=document.getElementById('bolBtn'),labelBtn=document.getElementById('labelBtn'),editShipmentBtn=document.getElementById('editShipmentBtn'),pickupBtn=document.getElementById('pickupBtn'),saveTemplateBtn=document.getElementById('saveTemplateBtn'),quoteBtn=document.getElementById('quoteBtn');
 const loadTemplateBtn=document.getElementById('loadTemplateBtn'),loadHistoryBtn=document.getElementById('loadHistoryBtn'),recordModal=document.getElementById('recordModal'),modalBody=document.getElementById('modalBody'),modalHead=document.getElementById('modalHead'),modalHeaderText=document.getElementById('modalHeaderText'),modalTitleText=document.getElementById('modalTitleText'),modalCloseBtn=document.getElementById('modalCloseBtn');
 const confirmModal=document.getElementById('confirmModal'),confirmCloseBtn=document.getElementById('confirmCloseBtn'),confirmCancelBtn=document.getElementById('confirmCancelBtn'),confirmProceedBtn=document.getElementById('confirmProceedBtn'),confirmDocName=document.getElementById('confirmDocName');
+const editConfirmModal=document.getElementById('editConfirmModal'),editConfirmCloseBtn=document.getElementById('editConfirmCloseBtn'),editConfirmCancelBtn=document.getElementById('editConfirmCancelBtn'),editConfirmProceedBtn=document.getElementById('editConfirmProceedBtn');
 let bolGenerated=false,labelGenerated=false,pickupBooked=false;
 let bolStale=false,labelStale=false;
 let formLocked=false;
@@ -128,6 +118,8 @@ function openModal(type){const isTemplate=type==='template',records=isTemplate?t
 function closeModal(){recordModal.classList.remove('show')}
 function showConfirmModal(docName,action){confirmAction=action;confirmDocName.textContent=docName;confirmModal.classList.add('show');}
 function closeConfirmModal(){confirmModal.classList.remove('show');confirmAction=null;}
+function showEditConfirmModal(){editConfirmModal.classList.add('show');}
+function closeEditConfirmModal(){editConfirmModal.classList.remove('show');}
 function randomId(p){return p+'-'+Math.floor(100000+Math.random()*900000)}
 function goodsSummary(d){const rows=[];for(let i=1;i<=5;i++){if(d['count'+i]||d['desc'+i]||d['weight'+i])rows.push([d['count'+i]||'',d['unit'+i]||'',d['desc'+i]||'',d['weight'+i]||'',d['weightType'+i]||'lbs'].filter(Boolean).join(' '))}return rows.length?rows.join(' ; '):'No freight rows entered'}
 function selectedServices(d){const labels=[],map={svc_pickup_alt_floor:'Alternate Floor Pickup',svc_pickup_appointment:'Appointment Pickup',svc_pickup_flatdeck:'Flat Deck Pickup',svc_pickup_inside:'Inside Pickup',svc_pickup_jobsite:'Jobsite Pickup',svc_pickup_mall:'Mall Pickup',svc_pickup_tailgate:'Power Tailgate Pickup',svc_pickup_residential:'Residential Pickup',svc_delivery_alt_floor:'Alternate Floor Delivery',svc_delivery_appointment:'Appointment Delivery',svc_delivery_flatdeck:'Flat Deck Delivery',svc_delivery_inside:'Inside Delivery',svc_delivery_jobsite:'Jobsite Delivery',svc_delivery_mall:'Mall Delivery',svc_delivery_notify:'Notify Prior To Delivery',svc_delivery_tailgate:'Power Tailgate Delivery',svc_delivery_residential:'Residential Delivery',svc_general_dg:'Dangerous Goods',svc_general_heat:'Heat',svc_general_120_228:'Over Length 120-228',svc_general_228_plus:'Over Length 228+',svc_general_prebooked:'Prebooked Appointment',svc_general_tarp:'Tarp'};Object.keys(map).forEach(k=>{if(d[k])labels.push(map[k])});if(d.svc_general_excess&&d.excessValue)labels.push('Excess Value '+d.excessValue);return labels.length?labels.join(', '):'None'}
@@ -135,46 +127,16 @@ function selectedServices(d){const labels=[],map={svc_pickup_alt_floor:'Alternat
 function updateStates(){
   const canPickup=(bolGenerated&&labelGenerated&&!bolStale&&!labelStale);
   pickupBtn.dataset.disabled=(!canPickup).toString();
-
-  // FIX 2: BOL button — use "Reprint BOL" when current, amber .stale class when out of date
-  // No more red background or "(Stale)" text suffix
-  if(bolGenerated && bolStale){
-    bolBtn.textContent='Regenerate BOL';
-    bolBtn.classList.add('stale');
-  } else if(bolGenerated){
-    bolBtn.textContent='Reprint BOL';
-    bolBtn.classList.remove('stale','warn');
-  } else {
-    bolBtn.textContent='Generate BOL';
-    bolBtn.classList.remove('stale','warn');
-  }
-
-  // Same treatment for Pallet Label
-  if(labelGenerated && labelStale){
-    labelBtn.textContent='Regenerate Pallet Label';
-    labelBtn.classList.add('stale');
-  } else if(labelGenerated){
-    labelBtn.textContent='Reprint Pallet Label';
-    labelBtn.classList.remove('stale','warn');
-  } else {
-    labelBtn.textContent='Generate Pallet Label';
-    labelBtn.classList.remove('stale','warn');
-  }
-
+  if(bolGenerated&&bolStale){bolBtn.textContent='Regenerate BOL';bolBtn.classList.add('stale');}
+  else if(bolGenerated){bolBtn.textContent='Reprint BOL';bolBtn.classList.remove('stale','warn');}
+  else{bolBtn.textContent='Generate BOL';bolBtn.classList.remove('stale','warn');}
+  if(labelGenerated&&labelStale){labelBtn.textContent='Regenerate Pallet Label';labelBtn.classList.add('stale');}
+  else if(labelGenerated){labelBtn.textContent='Reprint Pallet Label';labelBtn.classList.remove('stale','warn');}
+  else{labelBtn.textContent='Generate Pallet Label';labelBtn.classList.remove('stale','warn');}
   pickupBtn.textContent='Book Pickup';
   pickupBtn.classList.toggle('ready',canPickup);
-
-  if(formLocked && (bolGenerated || labelGenerated)){
-    editShipmentBtn.style.display='inline-block';
-  } else {
-    editShipmentBtn.style.display='none';
-  }
-}
-
-function prepareForRegenerate(type){
-  if(type==='BOL'){bolStale=true;}
-  else if(type==='Pallet Label'){labelStale=true;}
-  updateStates();
+  if(formLocked&&(bolGenerated||labelGenerated)){editShipmentBtn.style.display='inline-block';}
+  else{editShipmentBtn.style.display='none';}
 }
 
 function requiredValid(){const req=['contactName','contactPhone','contactEmail','shipperName','shipperAddress','shipperCity','shipperPostal','consigneeName','consigneeAddress','consigneeCity','consigneePostal','pickupDate'],d=getData(),missing=req.filter(k=>!String(d[k]||'').trim());if(missing.length){alert('Please fill all required fields before continuing. Missing: '+missing.join(', '));return false}return true}
@@ -188,38 +150,25 @@ confirmCloseBtn.addEventListener('click',closeConfirmModal);
 confirmCancelBtn.addEventListener('click',closeConfirmModal);
 confirmProceedBtn.addEventListener('click',()=>{if(confirmAction)confirmAction();closeConfirmModal();});
 confirmModal.addEventListener('click',e=>{if(e.target===confirmModal)closeConfirmModal()});
+
+// Edit Shipment modal wiring
+editConfirmCloseBtn.addEventListener('click',closeEditConfirmModal);
+editConfirmCancelBtn.addEventListener('click',closeEditConfirmModal);
+editConfirmProceedBtn.addEventListener('click',()=>{
+  unlockForm();
+  bolStale=bolGenerated;
+  labelStale=labelGenerated;
+  updateStates();
+  closeEditConfirmModal();
+});
+editConfirmModal.addEventListener('click',e=>{if(e.target===editConfirmModal)closeEditConfirmModal()});
+
 quoteBtn.addEventListener('click',()=>{alert('Quote generated successfully.')});
-
 function doBolGenerate(){if(!form.elements.bolNumber.value)form.elements.bolNumber.value=randomId('BOL');if(form.elements.probill.value==='0')form.elements.probill.value=randomId('PRB');bolGenerated=true;bolStale=false;lastGeneratedSnapshot=createSnapshot();lockForm();updateStates();makePdf('BOL');}
-bolBtn.addEventListener('click',()=>{
-  if(!requiredValid())return;
-  if(!formLocked && !bolGenerated){
-    showConfirmModal('BOL', doBolGenerate);
-  } else {
-    doBolGenerate();
-  }
-});
-
+bolBtn.addEventListener('click',()=>{if(!requiredValid())return;if(!formLocked&&!bolGenerated){showConfirmModal('BOL',doBolGenerate);}else{doBolGenerate();}});
 function doLabelGenerate(){if(form.elements.probill.value==='0')form.elements.probill.value=randomId('PRB');labelGenerated=true;labelStale=false;lastGeneratedSnapshot=createSnapshot();lockForm();updateStates();makePdf('Pallet Label');}
-labelBtn.addEventListener('click',()=>{
-  if(!requiredValid())return;
-  if(!formLocked && !labelGenerated){
-    showConfirmModal('Pallet Label', doLabelGenerate);
-  } else {
-    doLabelGenerate();
-  }
-});
-
-// Edit Shipment: unlock form and mark both docs stale so user knows to regenerate
-editShipmentBtn.addEventListener('click',()=>{
-  if(confirm('Unlocking the form will require you to regenerate the BOL and Pallet Label before booking a pickup. Continue?')){
-    unlockForm();
-    bolStale=bolGenerated;
-    labelStale=labelGenerated;
-    updateStates();
-  }
-});
-
+labelBtn.addEventListener('click',()=>{if(!requiredValid())return;if(!formLocked&&!labelGenerated){showConfirmModal('Pallet Label',doLabelGenerate);}else{doLabelGenerate();}});
+editShipmentBtn.addEventListener('click',showEditConfirmModal);
 pickupBtn.addEventListener('mouseenter',()=>{if(pickupBtn.dataset.disabled==='true')showCustomTooltip(pickupBtn,'Generate BOL and Pallet Label first to book pickup.')});
 pickupBtn.addEventListener('mouseleave',()=>{if(tooltipElement){tooltipElement.style.display='none';if(tooltipTimeout)clearTimeout(tooltipTimeout);}});
 pickupBtn.addEventListener('click',()=>{if(pickupBtn.dataset.disabled==='true'){showCustomTooltip(pickupBtn,'Generate BOL and Pallet Label first to book pickup.');return}if(createSnapshot()!==lastGeneratedSnapshot){alert('The form was changed after document generation. Please regenerate the BOL and pallet label before booking pickup.');return}form.elements.pickupId.value=randomId('PU');pickupBooked=true;updateStates();makePdf('Pickup Request');alert('Pickup booked successfully. Pickup ID created.')});
